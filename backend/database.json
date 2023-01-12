@@ -1,0 +1,99 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Rodrigo Rahman",
+            "email": "rodrigorahman@academiadoflutter.com.br",
+            "password": "123"
+        },
+        {
+            "id": 1,
+            "name": "Guilherme",
+            "email": "guilherme@gmail.com",
+            "password": "1234"
+        }
+    ],
+    "products": [
+        {
+            "id": 0,
+            "title": "Academia do flutter"
+        },
+        {
+            "id": 1,
+            "title": "Jornada Dart"
+        },
+        {
+            "id": 2,
+            "title": "Jornada GetX"
+        }
+    ],
+    "alunos": [
+        {
+            "id": "1",
+            "nome": "Jéssica",
+            "idade": 31,
+            "nomeCursos": [
+                "Academia do flutter",
+                "Imersão GetX"
+            ],
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Academia do flutter",
+                    "isAluno": true
+                },
+                {
+                    "id": 2,
+                    "nome": "Imersão GetX",
+                    "isAluno": true
+                }
+            ],
+            "endereco": {
+                "rua": "Rua X",
+                "numero": 200,
+                "CEP": "80730360",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Curitiba"
+                },
+                "telefone": {
+                    "ddd": 41,
+                    "telefone": "98475-4434"
+                }
+            }
+        },
+        {
+            "id": "2",
+            "nome": "Yago",            
+            "nomeCursos": [
+                "Academia do flutter",
+                "Imersão GetX"
+            ],
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Academia do flutter",
+                    "isAluno": true
+                },
+                {
+                    "id": 2,
+                    "nome": "Imersão GetX",
+                    "isAluno": false
+                }
+            ],
+            "endereco": {
+                "rua": "Rua X",
+                "numero": 200,
+                "CEP": "80730360",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Curitiba"
+                },
+                "telefone": {
+                    "ddd": 41,
+                    "telefone": "93333-7777"
+                }
+            }
+        }
+    ]
+}
