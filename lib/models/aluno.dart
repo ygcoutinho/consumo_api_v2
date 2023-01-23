@@ -36,9 +36,16 @@ class Aluno {
   String toJson() => jsonEncode(toMap());
 
   //fromMap
-  factory Aluno.fromMap(Map<String,dynamic> map){
-    return Aluno(id: map["id"] ?? 0, nome: map["nome"], nomeCursos: Curso.fromMap(map["nomeCursos"]) ?? [], cursos: cursos, endereco: endereco)
+  factory Aluno.fromMap(Map<String, dynamic> map) {
+    return Aluno(
+      id: map["id"] ?? 0,
+      nome: map["nome"],
+      nomeCursos: List<String>.from(map["nomeCursos"] ?? <String>[]),
+      cursos: map["cursos"]?.map((curso) => Curso.fromMap(curso)).toList() ?? <Curso>[],
+      endereco: Endereco.fromMap(map["endereco"] ?? <String, dynamic>{}),
+    );
   }
 
   //fromJson
+  factory Aluno.fromJson(String json) => Aluno.fromMap(jsonDecode(json));
 }

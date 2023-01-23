@@ -20,8 +20,8 @@ class Cidade {
   //fromMap
   factory Cidade.fromMap(Map<String, dynamic> map) {
     return Cidade(
-      id: map["id"],
-      nome: map["nome"],
+      id: map["id"] ?? 0,
+      nome: map["nome"] ?? "",
     );
   }
 

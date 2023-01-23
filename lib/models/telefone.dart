@@ -27,8 +27,8 @@ class Telefone {
   //método que recebe um Map<String,dynamic> e trasforma em um objeto (telefone)
   factory Telefone.fromMap(Map<String, dynamic> map) {
     return Telefone(
-      ddd: map["ddd"],
-      telefone: map["telefone"],
+      ddd: map["ddd"] ?? 0,
+      telefone: map["telefone"] ?? "",
     );
   }
 

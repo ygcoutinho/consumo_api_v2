@@ -23,8 +23,8 @@ class Endereco {
       "rua": rua,
       "numero": numero,
       "cep": cep,
-      "cidade": cidade,
-      "telefone": telefone,
+      "cidade": cidade.toMap(),
+      "telefone": telefone.toMap(),
     };
   }
 
@@ -34,11 +34,11 @@ class Endereco {
   //fromMap
   factory Endereco.fromMap(Map<String, dynamic> map) {
     return Endereco(
-      rua: map["rua"],
-      numero: map["numero"],
-      cep: map["cep"],
-      cidade: map["cidade"],
-      telefone: map["telefone"],
+      rua: map["rua"] ?? '',
+      numero: map["numero"] ?? 0,
+      cep: map["cep"] ?? '',
+      cidade: Cidade.fromMap(map["cidade"] ?? {}),
+      telefone: Telefone.fromMap(map["telefone"] ?? {}),
     );
   }
 
