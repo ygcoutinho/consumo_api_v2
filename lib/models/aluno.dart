@@ -51,7 +51,6 @@ class Aluno {
 
   @override
   String toString() {
-    // TODO: implement toString
     return '''id: $id, nome: $nome, 
                 nomeCursos: $nomeCursos, 
                 cursos: $cursos, 
