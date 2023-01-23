@@ -27,4 +27,9 @@ class Cidade {
 
   //fromJson
   factory Cidade.fromJson(String json) => Cidade.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return 'nome: $nome';
+  }
 }

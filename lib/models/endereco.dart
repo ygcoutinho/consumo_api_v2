@@ -22,7 +22,7 @@ class Endereco {
     return {
       "rua": rua,
       "numero": numero,
-      "cep": cep,
+      "CEP": cep,
       "cidade": cidade.toMap(),
       "telefone": telefone.toMap(),
     };
@@ -36,7 +36,7 @@ class Endereco {
     return Endereco(
       rua: map["rua"] ?? '',
       numero: map["numero"] ?? 0,
-      cep: map["cep"] ?? '',
+      cep: map["CEP"] ?? '',
       cidade: Cidade.fromMap(map["cidade"] ?? {}),
       telefone: Telefone.fromMap(map["telefone"] ?? {}),
     );
@@ -44,4 +44,11 @@ class Endereco {
 
   //fromJson
   factory Endereco.fromJson(String json) => Endereco.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return '''Rua: $rua, n: $numero, 
+              CEP: $cep, cidade: $cidade, 
+              telefone: $telefone''';
+  }
 }

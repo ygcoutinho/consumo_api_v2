@@ -35,4 +35,9 @@ class Telefone {
   //## factory .fromJson Passo 2
   //Método que recebe uma String json, que é convertida para um Map<String,dynamic> e transforma em um objeto (telefone)
   factory Telefone.fromJson(String json) => Telefone.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return 'Telefone: ($ddd) $telefone';
+  }
 }

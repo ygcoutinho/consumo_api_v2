@@ -30,4 +30,10 @@ class Curso {
 
   //fromJson
   factory Curso.fromJson(String json) => Curso.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return '''Curso: $nome, 
+              É aluno: $isAluno''';
+  }
 }

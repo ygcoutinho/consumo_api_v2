@@ -39,13 +39,22 @@ class Aluno {
   factory Aluno.fromMap(Map<String, dynamic> map) {
     return Aluno(
       id: map["id"] ?? 0,
-      nome: map["nome"],
+      nome: map["nome"] ?? "",
       nomeCursos: List<String>.from(map["nomeCursos"] ?? <String>[]),
-      cursos: map["cursos"]?.map((curso) => Curso.fromMap(curso)).toList() ?? <Curso>[],
+      cursos: map["cursos"]?.map<Curso>((curso) => Curso.fromMap(curso)).toList() ?? <Curso>[],
       endereco: Endereco.fromMap(map["endereco"] ?? <String, dynamic>{}),
     );
   }
 
   //fromJson
   factory Aluno.fromJson(String json) => Aluno.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '''id: $id, nome: $nome, 
+                nomeCursos: $nomeCursos, 
+                cursos: $cursos, 
+                endereco: $endereco''';
+  }
 }

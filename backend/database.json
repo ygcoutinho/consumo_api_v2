@@ -29,7 +29,7 @@
     ],
     "alunos": [
         {
-            "id": "1",
+            "id": 1,
             "nome": "Jéssica",
             "idade": 31,
             "nomeCursos": [
@@ -63,7 +63,7 @@
             }
         },
         {
-            "id": "2",
+            "id": 2,
             "nome": "Yago",            
             "nomeCursos": [
                 "Academia do flutter",
